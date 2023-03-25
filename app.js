@@ -17,7 +17,8 @@ $("#search").on("click", async function(e) {
     let input = $input.val();
     $input.val("");
     
-    const response = await axios.get("https://api.giphy.com/v1/gifs/search?api_key=egZzHOLOvfIZroA0jDDwr15TfUt4kEnT", {params: {q: input}});
+    const response = await axios.get("https://api.giphy.com/v1/gifs/search?api_key=egZzHOLOvfIZroA0jDDwr15TfUt4kEnT", 
+    {params: {q: input}});
     addGif(response.data);
 })
 
